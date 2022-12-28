@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.arena {
+  position: relative;
+  display: flex;
+  margin-top: 3rem;
+  width: 90vw;
+  min-width:300px;
+  max-width: 768px;
+  height:50vh;
+  min-height: 300px;
+  max-height: 768px;
+}
+
+.grass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid green;
+  text-align: center;
+}
+
+.grass.long {
+  background-color: forestgreen;
+}
+.grass.short {
+  background-color: darkgreen;
+  border: 1px dotted darkgreen;
+}
+
+.worker {
+  position: absolute;
+  color:#fff;
+  width:50px;
+  height:60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-top:3px solid black;
+}
+.worker.active, .worker.inactive {
+  background-color: blue;
+}
+.worker.inactive {
+  opacity: 0.5;
+}
+.worker.finish {
+  background-color: grey;
+}
+
+.worker.orientation-N {
+  transform: rotate(0deg);
+  margin-left: 20px;
+}
+.worker.orientation-E {
+  transform: rotate(90deg);
+}
+.worker.orientation-W {
+  transform: rotate(270deg);
+}
+.worker.orientation-S {
+  transform: rotate(180deg);
+}
